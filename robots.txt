@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /fxdesk/src/
+
+Sitemap: https://github.tarikdavulcu.com/fxdesk/sitemap.xml

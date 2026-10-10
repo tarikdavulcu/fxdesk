@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="tr" dir="ltr" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FXDesk — Döviz Büroları için Çevrimdışı Çapraz Kur ve Üçgen Arbitraj Hesaplayıcı</title>
+<meta name="description" content="Döviz büroları için alış/satış kurlarına duyarlı çapraz kur ve üçgen döngü hesaplayıcı. Kendi kurlarınızla çevrimdışı çalışır. 3 hesaplama ücretsiz, tek seferlik ömür boyu kilit.">
+<link rel="canonical" href="https://github.tarikdavulcu.com/fxdesk/tr/">
+<link rel="alternate" hreflang="en" href="https://github.tarikdavulcu.com/fxdesk/">
+<link rel="alternate" hreflang="de" href="https://github.tarikdavulcu.com/fxdesk/de/">
+<link rel="alternate" hreflang="fr" href="https://github.tarikdavulcu.com/fxdesk/fr/">
+<link rel="alternate" hreflang="ar" href="https://github.tarikdavulcu.com/fxdesk/ar/">
+<link rel="alternate" hreflang="es" href="https://github.tarikdavulcu.com/fxdesk/es/">
+<link rel="alternate" hreflang="ja" href="https://github.tarikdavulcu.com/fxdesk/ja/">
+<link rel="alternate" hreflang="tr" href="https://github.tarikdavulcu.com/fxdesk/tr/">
+<link rel="alternate" hreflang="x-default" href="https://github.tarikdavulcu.com/fxdesk/">
+<meta name="theme-color" content="#090e1b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FXDesk">
+<meta property="og:title" content="FXDesk — Döviz Büroları için Çevrimdışı Çapraz Kur ve Üçgen Arbitraj Hesaplayıcı">
+<meta property="og:description" content="Döviz büroları için alış/satış kurlarına duyarlı çapraz kur ve üçgen döngü hesaplayıcı. Kendi kurlarınızla çevrimdışı çalışır. 3 hesaplama ücretsiz, tek seferlik ömür boyu kilit.">
+<meta property="og:url" content="https://github.tarikdavulcu.com/fxdesk/tr/">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:image" content="https://github.tarikdavulcu.com/fxdesk/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FXDesk app icon: a three-currency conversion cycle">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FXDesk — Döviz Büroları için Çevrimdışı Çapraz Kur ve Üçgen Arbitraj Hesaplayıcı">
+<meta name="twitter:description" content="Döviz büroları için alış/satış kurlarına duyarlı çapraz kur ve üçgen döngü hesaplayıcı. Kendi kurlarınızla çevrimdışı çalışır. 3 hesaplama ücretsiz, tek seferlik ömür boyu kilit.">
+<meta name="twitter:image" content="https://github.tarikdavulcu.com/fxdesk/assets/img/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/site.css">
+<noscript><style>.navbar-collapse{display:block!important}</style></noscript>
+
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "FXDesk",
+ "applicationCategory": "FinanceApplication",
+ "operatingSystem": "iOS 26, watchOS 26",
+ "description": "Döviz büroları için alış/satış kurlarına duyarlı çapraz kur ve üçgen döngü hesaplayıcı. Kendi kurlarınızla çevrimdışı çalışır. 3 hesaplama ücretsiz, tek seferlik ömür boyu kilit.",
+ "inLanguage": "tr",
+ "url": "https://github.tarikdavulcu.com/fxdesk/tr/",
+ "image": "https://github.tarikdavulcu.com/fxdesk/assets/img/icon-512.png",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD",
+  "description": "Free download with 3 free calculations; optional one-time lifetime unlock (in-app purchase)."
+ }
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "tr",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "FXDesk çevrimdışı çalışır mı?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Evet. Kurlar, profiller, geçmiş ve tüm hesaplamalar iPhone’unuzda. Yalnızca isteğe bağlı ECB referans kurları ve App Store satın alması bağlantı gerektirir."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Gerçek zamanlı kur sağlar mı?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Hayır. FXDesk girdiğiniz kurlarla hesaplar. İsteğe bağlı ECB referans kurları her iş günü bir kez yayımlanan, bilgi amaçlı orta kurlardır ve hesaplamada kullanılmaz."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Üçgen arbitraj nedir?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Üç kur üzerinden A → B → C → A çevrimi. Makaslardan sonra son tutar başlangıçtan büyükse döngü teorik bir fark gösterir."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hesaplanan fırsat kâr garantisi verir mi?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Hayır. Sonuç, kurlar kadar iyidir. Stok, banknot, limitler, ücretler ve zamanlama bunu ortadan kaldırabilir. FXDesk sonuçları gösterge veya teorik olarak etiketler, asla işlem yapılabilir değil."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Alış ve satış kurları sonucu nasıl etkiler?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Satarken düşük alış kurunu alırsınız, alırken yüksek satış kurunu ödersiniz. Her adım makas öder; bu yüzden çoğu döngü başlangıcın biraz altında biter."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kaç ücretsiz hesaplama var?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Üç tamamlanmış hesaplama. Hatalar ve geçersiz girişler sayılmaz."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ömür boyu satın alma abonelik mi?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Hayır. Geri yükleyebileceğiniz, tek seferlik, tüketilmeyen bir uygulama içi satın almadır."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "watchOS uygulaması neyi gösterir?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Salt okunur anlık görüntü: kurlar ve makaslar, görüntünün yaşı, eski kur sayısı ve son hesaplama."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "FXDesk işlem yapar mı?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Hayır. Alım satım yapmaz, para değiştirmez, banka veya aracı kuruma bağlanmaz."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hangi veriler cihazda saklanır?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Gişe profilleriniz ve kurlarınız, hesaplama geçmişi, ayarlar ve ücretsiz hesaplama sayacı. Hiçbir şey yüklenmez; hesap yoktur."
+   }
+  }
+ ]
+}</script>
+
+</head>
+<body>
+
+<a class="visually-hidden-focusable skip" href="#main">Skip to content</a>
+<header class="sticky-top">
+<nav class="navbar navbar-expand-lg glass-nav" aria-label="FXDesk">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="../tr/"><img src="../assets/img/icon-192.png" width="32" height="32" alt="" class="brand-icon">FXDesk</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="#features">Özellikler</a></li><li class="nav-item"><a class="nav-link" href="#how">Nasıl çalışır</a></li><li class="nav-item"><a class="nav-link" href="#offline">Çevrimdışı</a></li><li class="nav-item"><a class="nav-link" href="#watch">watchOS</a></li><li class="nav-item"><a class="nav-link" href="#pricing">Fiyat</a></li><li class="nav-item"><a class="nav-link" href="#faq">SSS</a></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> Dil</a>
+<ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="../" hreflang="en" lang="en">English</a></li><li><a class="dropdown-item" href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a class="dropdown-item" href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a class="dropdown-item" href="../ar/" hreflang="ar" lang="ar">العربية</a></li><li><a class="dropdown-item" href="../es/" hreflang="es" lang="es">Español</a></li><li><a class="dropdown-item" href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="dropdown-item active" href="../tr/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a></li></ul></li>
+</ul>
+<div class="ms-lg-3"><span class="btn btn-accent btn-sm disabled" aria-disabled="true">Yakında App Store’da</span></div>
+</div></div></nav></header>
+
+<main id="main">
+<section class="hero"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-7">
+<p class="kicker">Döviz büroları, kasiyerler ve döviz işlemcileri için</p>
+<h1 class="display-5 fw-bold">Kendi alış ve satış kurlarınızdan çapraz kurlar ve üçgen yollar.</h1>
+<p class="lead">FXDesk panonuzdaki alış ve satış fiyatlarını kur tablosuna, çapraz kurlara ve sıralı <bdi dir="ltr">A → B → C → A</bdi> çevrim yollarına dönüştürür — her makas, ücret ve zaman damgası görünür.</p>
+<p class="text-secondary">Tamamen iPhone’unuzda, internetsiz çalışır ve teorik bir sonucu asla garanti kâr gibi göstermez.</p>
+<div class="d-flex flex-wrap gap-3 mt-4"><span class="btn btn-accent btn-lg disabled" aria-disabled="true">Yakında App Store’da</span>
+<a class="btn btn-outline-light btn-lg" href="#features">Özellikleri keşfedin</a></div>
+</div>
+<div class="col-lg-5 text-center"><figure class="phone-shot"><img src="../assets/shots/tr-triangle.jpg" width="560" height="1216" alt="Yerleşik örnek gişe ile gerçek FXDesk ekranı. Değerler örnektir, piyasa fiyatı değildir." loading="lazy" decoding="async"><figcaption>Yerleşik örnek gişe ile gerçek FXDesk ekranı. Değerler örnektir, piyasa fiyatı değildir.</figcaption></figure></div>
+</div></div></section>
+<section id="features" class="section"><div class="container">
+<h2 class="section-title">Yoğun bir gişenin hızına göre tasarlandı</h2><p class="section-lead">Her rakam nereden geldiğini, ne kadar eski olduğunu ve kurun hangi tarafının kullanıldığını gösterir.</p>
+<div class="bento"><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 8.8a15 15 0 0 1 4.2-2.6M9.5 5.2A15 15 0 0 1 22 8.8M5 12.5a10 10 0 0 1 3.4-2.2M12.9 10a10 10 0 0 1 6.1 2.5M8.5 16a5 5 0 0 1 7 0M12 20h.01M3 3l18 18"/></svg><h3 class="h5">Çevrimdışı Dayanıklılık</h3><p>Kur tabloları, geçmiş ve hesaplamalar cihazda. FXDesk uçak modunda açılır ve hesaplar.</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4 21 19H3Z"/><circle cx="12" cy="4" r="1.6"/><circle cx="3" cy="19" r="1.6"/><circle cx="21" cy="19" r="1.6"/></svg><h3 class="h5">Üçgen Arbitraj Motoru</h3><p>Tablonuzdaki her <bdi dir="ltr">A → B → C → A</bdi> döngüsünü iki yönde değerlendirir ve tahmini net sonuca göre sıralar.</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6 9.5 2h5L15 6M9 18l.5 4h5l.5-4M12 9.5V12l1.5 1.5"/></svg><h3 class="h5">watchOS Makas Görünümü</h3><p>Aktif gişenizin, kurların yaşının ve son sonucunuzun Apple Watch’ta salt okunur anlık görüntüsü.</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg><h3 class="h5">Gişe Hızı</h3><p>Büyük rakamlı gişe modu, eşit genişlikte rakamlar ve arama öncelikli döviz seçici.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg><h3 class="h5">Yerel Kur Tablosu</h3><p>Her çift için alış ve satış girin. Tablo her yöndeki karşılığı gösterir; kur olmayan yerde “—”.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4v16M7 4 3 8M7 4l4 4M17 20V4M17 20l-4-4M17 20l4-4"/></svg><h3 class="h5">Alış/Satışa Duyarlı Hesaplama</h3><p>Baz dövizi satmak alış kurunu, almak 1 ÷ satış kurunu kullanır. Ters kurlar tarafları doğru değiştirir. Orta kurlar sahte kâr için çarpılmaz.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h14l-4-4M20 16H6l4 4"/></svg><h3 class="h5">Çapraz Kur Makas Analizi</h3><p>Doğrudan kuru üçüncü döviz üzerinden sentetik çapraz kurla, iki makas ve kesişme tespitiyle karşılaştırın.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><h3 class="h5">Ücretli Sonuçlar</h3><p>Adım başı komisyon ve sabit ücret ekleyin. Brüt ve tahmini net yan yana, adım adım.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="14" height="13" rx="2"/><path d="M7 4h12a2 2 0 0 1 2 2v11"/></svg><h3 class="h5">Kayıtlı Gişe Profilleri</h3><p>Her gişe veya şube için ayrı kur tablosu. Çoğaltın, adlandırın, dışa ve içe aktarın — kurlar asla karışmaz.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg><h3 class="h5">Hesaplama Geçmişi</h3><p>Her hesaplama kullandığı kurlar, zamanlar, yuvarlama ve ücretlerle saklanır.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg><h3 class="h5">Gizlilik Odaklı</h3><p>Hesap yok, analiz yok, izleme yok. Kurlarınız dışa aktarmadıkça cihazınızda kalır.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.2 8.5a5 5 0 1 1 0 7c-2.3-1.9-4.1-5.1-6.2-7a5 5 0 1 0 0 7c2.1-1.9 3.9-5.1 6.2-7Z"/></svg><h3 class="h5">Tek Seferlik Ömür Boyu Kilit</h3><p>Üç hesaplama ücretsiz, sonra tek bir uygulama içi satın alma. Abonelik yok.</p></article></div></div></section>
+<section id="how" class="section"><div class="container">
+<h2 class="section-title">Nasıl çalışır</h2><ol class="steps"><li class="step"><span class="step-num" aria-hidden="true">1</span><h3 class="h5">Kurları girin</h3><p>Panonuzdaki alış ve satış fiyatlarını yazın ya da örnek gişeyle başlayın.</p></li><li class="step"><span class="step-num" aria-hidden="true">2</span><h3 class="h5">Döviz ve tutar seçin</h3><p>Başlangıç dövizi ve tutarı ya da belirli bir üç dövizli döngüyü seçin.</p></li><li class="step"><span class="step-num" aria-hidden="true">3</span><h3 class="h5">Geçerli yolları hesaplayın</h3><p>FXDesk her adıma doğru kur tarafını uygular ve tablonuzun desteklediği döngüleri sıralar.</p></li><li class="step"><span class="step-num" aria-hidden="true">4</span><h3 class="h5">Kanıtı inceleyin</h3><p>Makasları, ücretleri, nakit yuvarlamayı, kurların güncelliğini ve varsayımları kontrol edin.</p></li></ol></div></section>
+<section id="transparency" class="section"><div class="container"><div class="glass-panel honest">
+<h2 class="section-title"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg> Finansal şeffaflık</h2><p>Gösterge veya referans kur, işlem yapılabilir bir fiyat değildir. FXDesk girdiğiniz kurlarla hesaplar; bir gişenin bu kurlara uyup uymayacağını, banknot stoku olup olmadığını veya limit uygulayıp uygulamadığını bilemez.</p><p>Makaslar, komisyonlar, banknota yuvarlama ve adımlar arasındaki süre genellikle küçük teorik farkları yok eder. Bu yüzden FXDesk brüt ve tahmini neti ayrı gösterir; eski, yalnız orta kur veya örnek verileri teorik olarak işaretler.</p><p>FXDesk bir hesaplama aracıdır. Alım satım veya döviz işlemi yapmaz, yatırım danışmanlığı vermez ve kâr garanti etmez.</p></div></div></section>
+<section id="offline" class="section"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-7"><h2 class="section-title">Çevrimdışı dayanıklılık</h2><p>Tüm kurlar, profiller, geçmiş ve hesaplamalar iPhone’da saklanır ve bağlantısız çalışır. Her kur kayıt zamanını ve kaynağını korur; süre sınırınızı aşan kurlar işaretlenir — sessizce güncel sayılmaz.</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Elle girilen kurlar ana veri kaynağıdır</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Eski sayılma süresini siz belirlersiniz</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> İsteğe bağlı ECB referans kurları — yalnızca karşılaştırma için orta kurlar, istendiğinde indirilir ve hesaplamada kullanılmaz</li></ul></div>
+<div class="col-lg-5 text-center"><figure class="phone-shot"><img src="../assets/shots/tr-rates.jpg" width="560" height="1216" alt="Açıklama amaçlı örnek veri" loading="lazy" decoding="async"><figcaption>Açıklama amaçlı örnek veri</figcaption></figure></div>
+</div></div></section>
+<section id="watch" class="section"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-4 text-center order-lg-2"><figure class="watch-shot"><img src="../assets/shots/tr-watch.jpg" width="300" height="357" alt="Örnek verili Apple Watch ekranı." loading="lazy" decoding="async"><figcaption>Örnek verili Apple Watch ekranı.</figcaption></figure></div>
+<div class="col-lg-8 order-lg-1"><h2 class="section-title">Apple Watch</h2><p>Saat uygulaması aktif gişenin salt okunur anlık görüntüsünü gösterir: makaslı kurlar, görüntünün yaşı, eski kur sayısı ve son hesaplamanız. iPhone uzaktayken son görüntüyü saklar.</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Anlık görüntüdür, canlı kur değildir — yaşı her zaman görünür</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Saat erişilebilir olduğunda iOS tarafından eşitlenir; zamanlamayı sistem belirler</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Görüntü yaşı ve eski kur sayısı için komplikasyonlar</li></ul></div>
+</div></div></section>
+<section id="pricing" class="section"><div class="container">
+<h2 class="section-title">Basit fiyatlandırma</h2>
+<div class="row g-4">
+<div class="col-md-6"><div class="price-card h-100"><h3 class="h4">3 Arbitraj Ücretsiz</h3><p class="price">Ücretsiz</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 3 tamamlanmış üçgen veya çapraz kur hesaplaması</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Sınırsız kur girişi, tablo ve geçmiş görüntüleme</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Tüm özellikler, gizli bir şey yok</li></ul></div></div>
+<div class="col-md-6"><div class="price-card featured h-100"><h3 class="h4">Ömür Boyu Kilit</h3><p class="price">$29.99</p><p class="small text-secondary">Tek seferlik uygulama içi satın alma (ABD fiyatı; yerel fiyatları App Store belirler).</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Sınırsız hesaplama</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Abonelik yok, hesap yok</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Aynı Apple Hesabıyla cihazlarınızda geri yüklenir</li></ul>
+<div class="mt-3"><span class="btn btn-accent disabled" aria-disabled="true">Yakında App Store’da</span></div></div></div>
+</div>
+<div class="glass-panel mt-4"><h3 class="h5">Bir hesaplama ne sayılır?</h3><p class="mb-0">Başarılı bir üçgen veya çapraz kur sonucu. Geçersiz giriş, hatalar, kurlara göz atma veya düzenleme ve geçmişi yeniden açma asla sayılmaz; aynı hesaplama iki kez sayılmaz.</p></div>
+</div></section>
+<section id="faq" class="section"><div class="container narrow">
+<h2 class="section-title">Sık sorulan sorular</h2><details class="faq-item"><summary>FXDesk çevrimdışı çalışır mı?</summary><p>Evet. Kurlar, profiller, geçmiş ve tüm hesaplamalar iPhone’unuzda. Yalnızca isteğe bağlı ECB referans kurları ve App Store satın alması bağlantı gerektirir.</p></details><details class="faq-item"><summary>Gerçek zamanlı kur sağlar mı?</summary><p>Hayır. FXDesk girdiğiniz kurlarla hesaplar. İsteğe bağlı ECB referans kurları her iş günü bir kez yayımlanan, bilgi amaçlı orta kurlardır ve hesaplamada kullanılmaz.</p></details><details class="faq-item"><summary>Üçgen arbitraj nedir?</summary><p>Üç kur üzerinden <bdi dir="ltr">A → B → C → A</bdi> çevrimi. Makaslardan sonra son tutar başlangıçtan büyükse döngü teorik bir fark gösterir.</p></details><details class="faq-item"><summary>Hesaplanan fırsat kâr garantisi verir mi?</summary><p>Hayır. Sonuç, kurlar kadar iyidir. Stok, banknot, limitler, ücretler ve zamanlama bunu ortadan kaldırabilir. FXDesk sonuçları gösterge veya teorik olarak etiketler, asla işlem yapılabilir değil.</p></details><details class="faq-item"><summary>Alış ve satış kurları sonucu nasıl etkiler?</summary><p>Satarken düşük alış kurunu alırsınız, alırken yüksek satış kurunu ödersiniz. Her adım makas öder; bu yüzden çoğu döngü başlangıcın biraz altında biter.</p></details><details class="faq-item"><summary>Kaç ücretsiz hesaplama var?</summary><p>Üç tamamlanmış hesaplama. Hatalar ve geçersiz girişler sayılmaz.</p></details><details class="faq-item"><summary>Ömür boyu satın alma abonelik mi?</summary><p>Hayır. Geri yükleyebileceğiniz, tek seferlik, tüketilmeyen bir uygulama içi satın almadır.</p></details><details class="faq-item"><summary>watchOS uygulaması neyi gösterir?</summary><p>Salt okunur anlık görüntü: kurlar ve makaslar, görüntünün yaşı, eski kur sayısı ve son hesaplama.</p></details><details class="faq-item"><summary>FXDesk işlem yapar mı?</summary><p>Hayır. Alım satım yapmaz, para değiştirmez, banka veya aracı kuruma bağlanmaz.</p></details><details class="faq-item"><summary>Hangi veriler cihazda saklanır?</summary><p>Gişe profilleriniz ve kurlarınız, hesaplama geçmişi, ayarlar ve ücretsiz hesaplama sayacı. Hiçbir şey yüklenmez; hesap yoktur.</p></details></div></section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-md-5"><p class="d-flex align-items-center gap-2 fw-semibold mb-2"><img src="../assets/img/icon-192.png" width="28" height="28" alt="" class="brand-icon">FXDesk</p><p class="text-secondary small mb-0">Döviz büroları için çevrimdışı çapraz kur ve üçgen hesaplayıcı.</p></div>
+<div class="col-md-3"><ul class="list-unstyled small mb-0">
+<li><a href="../tr/privacy.html">Gizlilik Politikası</a></li>
+<li><a href="../tr/terms.html">Kullanım Koşulları</a></li>
+<li><a href="../tr/support.html">Destek</a></li>
+<li><a href="mailto:fxdesk@tarikdavulcu.com">İletişim</a></li>
+</ul></div>
+<div class="col-md-4 small"><p class="mb-1"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> <a href="../" hreflang="en" lang="en">English</a> · <a href="../de/" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/" hreflang="fr" lang="fr">Français</a> · <a href="../ar/" hreflang="ar" lang="ar">العربية</a> · <a href="../es/" hreflang="es" lang="es">Español</a> · <a href="../ja/" hreflang="ja" lang="ja">日本語</a> · <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></p></div>
+</div>
+<p class="small text-secondary mt-4 mb-0">© 2026 FXDesk. Herhangi bir banka, borsa, merkez bankası veya Apple ile bağlantılı değildir.</p>
+</div></footer>
+<script src="../js/bootstrap.bundle.min.js" defer></script>
+</body></html>

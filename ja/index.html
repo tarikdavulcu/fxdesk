@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja" dir="ltr" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FXDesk — 両替窓口向けオフライン対応クロスレート・三角裁定計算ツール</title>
+<meta name="description" content="BidとAskを正しく扱う両替窓口向けのクロスレート・三角サイクル計算ツール。自分のレートでオフライン動作。3回まで無料、買い切り。">
+<link rel="canonical" href="https://github.tarikdavulcu.com/fxdesk/ja/">
+<link rel="alternate" hreflang="en" href="https://github.tarikdavulcu.com/fxdesk/">
+<link rel="alternate" hreflang="de" href="https://github.tarikdavulcu.com/fxdesk/de/">
+<link rel="alternate" hreflang="fr" href="https://github.tarikdavulcu.com/fxdesk/fr/">
+<link rel="alternate" hreflang="ar" href="https://github.tarikdavulcu.com/fxdesk/ar/">
+<link rel="alternate" hreflang="es" href="https://github.tarikdavulcu.com/fxdesk/es/">
+<link rel="alternate" hreflang="ja" href="https://github.tarikdavulcu.com/fxdesk/ja/">
+<link rel="alternate" hreflang="tr" href="https://github.tarikdavulcu.com/fxdesk/tr/">
+<link rel="alternate" hreflang="x-default" href="https://github.tarikdavulcu.com/fxdesk/">
+<meta name="theme-color" content="#090e1b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FXDesk">
+<meta property="og:title" content="FXDesk — 両替窓口向けオフライン対応クロスレート・三角裁定計算ツール">
+<meta property="og:description" content="BidとAskを正しく扱う両替窓口向けのクロスレート・三角サイクル計算ツール。自分のレートでオフライン動作。3回まで無料、買い切り。">
+<meta property="og:url" content="https://github.tarikdavulcu.com/fxdesk/ja/">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://github.tarikdavulcu.com/fxdesk/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FXDesk app icon: a three-currency conversion cycle">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FXDesk — 両替窓口向けオフライン対応クロスレート・三角裁定計算ツール">
+<meta name="twitter:description" content="BidとAskを正しく扱う両替窓口向けのクロスレート・三角サイクル計算ツール。自分のレートでオフライン動作。3回まで無料、買い切り。">
+<meta name="twitter:image" content="https://github.tarikdavulcu.com/fxdesk/assets/img/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/site.css">
+<noscript><style>.navbar-collapse{display:block!important}</style></noscript>
+
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "FXDesk",
+ "applicationCategory": "FinanceApplication",
+ "operatingSystem": "iOS 26, watchOS 26",
+ "description": "BidとAskを正しく扱う両替窓口向けのクロスレート・三角サイクル計算ツール。自分のレートでオフライン動作。3回まで無料、買い切り。",
+ "inLanguage": "ja",
+ "url": "https://github.tarikdavulcu.com/fxdesk/ja/",
+ "image": "https://github.tarikdavulcu.com/fxdesk/assets/img/icon-512.png",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD",
+  "description": "Free download with 3 free calculations; optional one-time lifetime unlock (in-app purchase)."
+ }
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "ja",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "オフラインで使えますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "はい。レート、プロファイル、履歴、計算はすべてiPhone上にあります。接続が必要なのは任意のECB参照レートとApp Storeでの購入のみです。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "リアルタイムの為替レートを提供しますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "いいえ。入力したレートで計算します。任意のECB参照レートは営業日ごとに1回公表される参考情報で、計算には使いません。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "三角裁定とは何ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "3つのレートで A → B → C → A と換算することです。スプレッド後の最終金額が開始金額を上回ると、理論上の差が表示されます。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "計算上の機会は利益を保証しますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "いいえ。結果はレート次第です。在庫、紙幣、上限、手数料、タイミングで消えることがあります。FXDeskは結果を参考値または理論値と表示し、約定可能とは表示しません。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "BidとAskは結果にどう影響しますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "売るときは低いBid、買うときは高いAskが適用されます。各ステップでスプレッドを支払うため、多くのサイクルは開始金額をわずかに下回ります。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "無料計算は何回ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "完了した計算3回です。エラーや無効な入力は数えません。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "買い切りはサブスクリプションですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "いいえ。復元可能な1回限りの非消耗型アプリ内購入です。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "watchOSアプリでは何が見られますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "読み取り専用のスナップショット：レートとスプレッド、経過時間、古いレート数、最後の計算です。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "FXDeskは取引を実行しますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "いいえ。注文、両替、銀行・ブローカーへの接続は一切行いません。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "端末にはどんなデータが保存されますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "デスクプロファイルとレート、計算履歴、設定、無料計算の回数です。アップロードはなく、アカウントもありません。"
+   }
+  }
+ ]
+}</script>
+
+</head>
+<body>
+
+<a class="visually-hidden-focusable skip" href="#main">Skip to content</a>
+<header class="sticky-top">
+<nav class="navbar navbar-expand-lg glass-nav" aria-label="FXDesk">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="../ja/"><img src="../assets/img/icon-192.png" width="32" height="32" alt="" class="brand-icon">FXDesk</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="#features">機能</a></li><li class="nav-item"><a class="nav-link" href="#how">使い方</a></li><li class="nav-item"><a class="nav-link" href="#offline">オフライン</a></li><li class="nav-item"><a class="nav-link" href="#watch">watchOS</a></li><li class="nav-item"><a class="nav-link" href="#pricing">価格</a></li><li class="nav-item"><a class="nav-link" href="#faq">よくある質問</a></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> 言語</a>
+<ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="../" hreflang="en" lang="en">English</a></li><li><a class="dropdown-item" href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a class="dropdown-item" href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a class="dropdown-item" href="../ar/" hreflang="ar" lang="ar">العربية</a></li><li><a class="dropdown-item" href="../es/" hreflang="es" lang="es">Español</a></li><li><a class="dropdown-item active" href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></li><li><a class="dropdown-item" href="../tr/" hreflang="tr" lang="tr">Türkçe</a></li></ul></li>
+</ul>
+<div class="ms-lg-3"><span class="btn btn-accent btn-sm disabled" aria-disabled="true">App Storeで近日公開</span></div>
+</div></div></nav></header>
+
+<main id="main">
+<section class="hero"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-7">
+<p class="kicker">両替窓口・キャッシャー・為替トレーダーのために</p>
+<h1 class="display-5 fw-bold">自分の買取・販売レートから、クロスレートと三角経路を計算。</h1>
+<p class="lead">FXDeskはボードのBid/Askをレート表、クロスレート、順位付きの <bdi dir="ltr">A → B → C → A</bdi> 換算経路に変換し、スプレッド・手数料・時刻をすべて表示します。</p>
+<p class="text-secondary">iPhone上で完結し、インターネットなしで動作。理論値を利益保証のように見せることはありません。</p>
+<div class="d-flex flex-wrap gap-3 mt-4"><span class="btn btn-accent btn-lg disabled" aria-disabled="true">App Storeで近日公開</span>
+<a class="btn btn-outline-light btn-lg" href="#features">機能を見る</a></div>
+</div>
+<div class="col-lg-5 text-center"><figure class="phone-shot"><img src="../assets/shots/ja-triangle.jpg" width="560" height="1216" alt="内蔵のサンプルデスクを使った実際のFXDesk画面。数値は説明用で、市場価格ではありません。" loading="lazy" decoding="async"><figcaption>内蔵のサンプルデスクを使った実際のFXDesk画面。数値は説明用で、市場価格ではありません。</figcaption></figure></div>
+</div></div></section>
+<section id="features" class="section"><div class="container">
+<h2 class="section-title">忙しい窓口のスピードに合わせて</h2><p class="section-lead">すべての数値に、出所・経過時間・使用したレートの側が表示されます。</p>
+<div class="bento"><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 8.8a15 15 0 0 1 4.2-2.6M9.5 5.2A15 15 0 0 1 22 8.8M5 12.5a10 10 0 0 1 3.4-2.2M12.9 10a10 10 0 0 1 6.1 2.5M8.5 16a5 5 0 0 1 7 0M12 20h.01M3 3l18 18"/></svg><h3 class="h5">オフライン対応</h3><p>レート表、履歴、計算はすべて端末内。機内モードでも起動・計算できます。</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4 21 19H3Z"/><circle cx="12" cy="4" r="1.6"/><circle cx="3" cy="19" r="1.6"/><circle cx="21" cy="19" r="1.6"/></svg><h3 class="h5">三角裁定エンジン</h3><p>表で成立するすべての <bdi dir="ltr">A → B → C → A</bdi> サイクルを両方向で評価し、推定ネット結果で順位付けします。</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6 9.5 2h5L15 6M9 18l.5 4h5l.5-4M12 9.5V12l1.5 1.5"/></svg><h3 class="h5">watchOSでスプレッド確認</h3><p>使用中デスクのスナップショット、レートの経過時間、最後の結果をApple Watchで読み取り専用表示。</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg><h3 class="h5">窓口のスピード</h3><p>大きな数字のデスクモード、等幅数字、検索優先の通貨選択。</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg><h3 class="h5">ローカルレート表</h3><p>ペアごとにBidとAskを入力。表はすべての方向の換算を示し、レートがない箇所は「—」になります。</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4v16M7 4 3 8M7 4l4 4M17 20V4M17 20l-4-4M17 20l4-4"/></svg><h3 class="h5">Bid/Askを正しく適用</h3><p>基準通貨を売るときはBid、買うときは1÷Ask。逆ペアは両側を正しく入れ替えます。仲値の掛け合わせで見かけの利益を作ることはありません。</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h14l-4-4M20 16H6l4 4"/></svg><h3 class="h5">クロスレートのスプレッド分析</h3><p>直接レートと第3通貨経由の合成クロスレートを、両方のスプレッドとクロス検出込みで比較。</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><h3 class="h5">手数料を反映</h3><p>ステップごとの手数料と固定手数料を入力。グロスと推定ネットをステップごとに並べて表示。</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="14" height="13" rx="2"/><path d="M7 4h12a2 2 0 0 1 2 2v11"/></svg><h3 class="h5">デスクプロファイル</h3><p>窓口や支店ごとに別のレート表。複製、名前変更、書き出し、読み込み — レートが混ざることはありません。</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg><h3 class="h5">計算履歴</h3><p>各計算は、使用したレート、時刻、端数処理、手数料とともに保存されます。</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg><h3 class="h5">プライバシー重視</h3><p>アカウント不要、分析・トラッキングなし。書き出さない限りレートは端末内に残ります。</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.2 8.5a5 5 0 1 1 0 7c-2.3-1.9-4.1-5.1-6.2-7a5 5 0 1 0 0 7c2.1-1.9 3.9-5.1 6.2-7Z"/></svg><h3 class="h5">買い切りアンロック</h3><p>3回まで無料、その後は1回のアプリ内購入。サブスクリプションではありません。</p></article></div></div></section>
+<section id="how" class="section"><div class="container">
+<h2 class="section-title">使い方</h2><ol class="steps"><li class="step"><span class="step-num" aria-hidden="true">1</span><h3 class="h5">レートを入力</h3><p>ボードの買取（Bid）・販売（Ask）レートを入力、またはサンプルデスクから開始。</p></li><li class="step"><span class="step-num" aria-hidden="true">2</span><h3 class="h5">通貨と金額を選択</h3><p>開始通貨と金額、または特定の3通貨サイクルを選びます。</p></li><li class="step"><span class="step-num" aria-hidden="true">3</span><h3 class="h5">有効な経路を計算</h3><p>各ステップに正しいレート側を適用し、成立するサイクルを順位付けします。</p></li><li class="step"><span class="step-num" aria-hidden="true">4</span><h3 class="h5">根拠を確認</h3><p>スプレッド、手数料、現金端数、レートの鮮度、各結果の前提を確認します。</p></li></ol></div></section>
+<section id="transparency" class="section"><div class="container"><div class="glass-panel honest">
+<h2 class="section-title"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg> 金融面の透明性</h2><p>参考レートや基準レートは約定可能な価格ではありません。FXDeskは入力されたレートで計算するため、窓口がそのレートに応じるか、紙幣の在庫や上限があるかは分かりません。</p><p>スプレッド、手数料、紙幣単位への端数処理、ステップ間の時間差により、小さな理論上の差は通常消えます。そのためFXDeskはグロスと推定ネットを分けて表示し、古いレート・仲値のみ・サンプルのデータは理論値と表示します。</p><p>FXDeskは計算ツールです。取引や両替を実行せず、金融助言も行わず、利益を保証しません。</p></div></div></section>
+<section id="offline" class="section"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-7"><h2 class="section-title">オフライン対応</h2><p>レート、プロファイル、履歴、計算はすべてiPhoneに保存され、接続なしで動作します。各レートは記録時刻と出所を保持し、期限を過ぎたレートは警告表示され、黙って最新扱いされることはありません。</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 手入力レートが主なデータソース</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 古いとみなすまでの時間を設定可能</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 任意のECB参照レート — 比較用の仲値で、更新をタップしたときだけ取得し、計算には使用しません</li></ul></div>
+<div class="col-lg-5 text-center"><figure class="phone-shot"><img src="../assets/shots/ja-rates.jpg" width="560" height="1216" alt="説明用サンプルデータ" loading="lazy" decoding="async"><figcaption>説明用サンプルデータ</figcaption></figure></div>
+</div></div></section>
+<section id="watch" class="section"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-4 text-center order-lg-2"><figure class="watch-shot"><img src="../assets/shots/ja-watch.jpg" width="300" height="357" alt="サンプルデータを表示したApple Watch画面。" loading="lazy" decoding="async"><figcaption>サンプルデータを表示したApple Watch画面。</figcaption></figure></div>
+<div class="col-lg-8 order-lg-1"><h2 class="section-title">Apple Watch</h2><p>Watchアプリは使用中デスクの読み取り専用スナップショット（レートとスプレッド、経過時間、古いレート数、最後の計算）を表示します。iPhoneが離れていても最後のスナップショットを保持します。</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> スナップショットでありライブレートではありません — 経過時間を常に表示</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Watchに接続できるときにiOSが同期。タイミングはシステムが決定</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 経過時間と古いレート数のコンプリケーション</li></ul></div>
+</div></div></section>
+<section id="pricing" class="section"><div class="container">
+<h2 class="section-title">シンプルな価格</h2>
+<div class="row g-4">
+<div class="col-md-6"><div class="price-card h-100"><h3 class="h4">3回まで無料で裁定計算</h3><p class="price">無料</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 三角計算またはクロスレート計算を3回完了</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> レート入力・レート表・履歴閲覧は無制限</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> すべての機能を利用可能</li></ul></div></div>
+<div class="col-md-6"><div class="price-card featured h-100"><h3 class="h4">買い切りアンロック</h3><p class="price">$29.99</p><p class="small text-secondary">1回限りのアプリ内購入（米国価格。各国の価格はApp Storeが設定します）。</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 計算無制限</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> サブスクリプション・アカウント不要</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 同じApple Accountで復元可能</li></ul>
+<div class="mt-3"><span class="btn btn-accent disabled" aria-disabled="true">App Storeで近日公開</span></div></div></div>
+</div>
+<div class="glass-panel mt-4"><h3 class="h5">何が1回の計算になりますか？</h3><p class="mb-0">三角計算またはクロスレート計算の結果が正常に表示されたときです。無効な入力、エラー、レートの閲覧や編集、履歴の再表示は数えず、同じ計算を二重に数えることもありません。</p></div>
+</div></section>
+<section id="faq" class="section"><div class="container narrow">
+<h2 class="section-title">よくある質問</h2><details class="faq-item"><summary>オフラインで使えますか？</summary><p>はい。レート、プロファイル、履歴、計算はすべてiPhone上にあります。接続が必要なのは任意のECB参照レートとApp Storeでの購入のみです。</p></details><details class="faq-item"><summary>リアルタイムの為替レートを提供しますか？</summary><p>いいえ。入力したレートで計算します。任意のECB参照レートは営業日ごとに1回公表される参考情報で、計算には使いません。</p></details><details class="faq-item"><summary>三角裁定とは何ですか？</summary><p>3つのレートで <bdi dir="ltr">A → B → C → A</bdi> と換算することです。スプレッド後の最終金額が開始金額を上回ると、理論上の差が表示されます。</p></details><details class="faq-item"><summary>計算上の機会は利益を保証しますか？</summary><p>いいえ。結果はレート次第です。在庫、紙幣、上限、手数料、タイミングで消えることがあります。FXDeskは結果を参考値または理論値と表示し、約定可能とは表示しません。</p></details><details class="faq-item"><summary>BidとAskは結果にどう影響しますか？</summary><p>売るときは低いBid、買うときは高いAskが適用されます。各ステップでスプレッドを支払うため、多くのサイクルは開始金額をわずかに下回ります。</p></details><details class="faq-item"><summary>無料計算は何回ですか？</summary><p>完了した計算3回です。エラーや無効な入力は数えません。</p></details><details class="faq-item"><summary>買い切りはサブスクリプションですか？</summary><p>いいえ。復元可能な1回限りの非消耗型アプリ内購入です。</p></details><details class="faq-item"><summary>watchOSアプリでは何が見られますか？</summary><p>読み取り専用のスナップショット：レートとスプレッド、経過時間、古いレート数、最後の計算です。</p></details><details class="faq-item"><summary>FXDeskは取引を実行しますか？</summary><p>いいえ。注文、両替、銀行・ブローカーへの接続は一切行いません。</p></details><details class="faq-item"><summary>端末にはどんなデータが保存されますか？</summary><p>デスクプロファイルとレート、計算履歴、設定、無料計算の回数です。アップロードはなく、アカウントもありません。</p></details></div></section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-md-5"><p class="d-flex align-items-center gap-2 fw-semibold mb-2"><img src="../assets/img/icon-192.png" width="28" height="28" alt="" class="brand-icon">FXDesk</p><p class="text-secondary small mb-0">両替窓口向けオフライン対応クロスレート・三角計算ツール。</p></div>
+<div class="col-md-3"><ul class="list-unstyled small mb-0">
+<li><a href="../ja/privacy.html">プライバシーポリシー</a></li>
+<li><a href="../ja/terms.html">利用規約</a></li>
+<li><a href="../ja/support.html">サポート</a></li>
+<li><a href="mailto:fxdesk@tarikdavulcu.com">お問い合わせ</a></li>
+</ul></div>
+<div class="col-md-4 small"><p class="mb-1"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> <a href="../" hreflang="en" lang="en">English</a> · <a href="../de/" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/" hreflang="fr" lang="fr">Français</a> · <a href="../ar/" hreflang="ar" lang="ar">العربية</a> · <a href="../es/" hreflang="es" lang="es">Español</a> · <a href="../ja/" hreflang="ja" lang="ja">日本語</a> · <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></p></div>
+</div>
+<p class="small text-secondary mt-4 mb-0">© 2026 FXDesk。銀行、取引所、中央銀行、Appleとは提携していません。</p>
+</div></footer>
+<script src="../js/bootstrap.bundle.min.js" defer></script>
+</body></html>

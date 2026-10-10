@@ -1,0 +1,112 @@
+/* FXDesk site — dark financial terminal, glass surfaces, bento grid. Bootstrap 5.3.8 provides the base. */
+:root {
+  --fx-bg-top: #090e1b;
+  --fx-bg-bottom: #111319;
+  --fx-accent: #4dc7fa;
+  --fx-gain: #33d678;
+  --fx-loss: #ff6161;
+  --fx-warn: #ffbf3d;
+  --fx-card: rgba(255, 255, 255, 0.055);
+  --fx-stroke: rgba(255, 255, 255, 0.11);
+  --fx-text: #e9eef7;
+  --fx-muted: #a7b1c2;
+  --bs-body-bg: var(--fx-bg-top);
+  --bs-body-color: var(--fx-text);
+  --bs-secondary-color: var(--fx-muted);
+  --bs-link-color: var(--fx-accent);
+  --bs-link-hover-color: #8fdcff;
+  --bs-link-color-rgb: 77, 199, 250;
+}
+html { scroll-padding-top: 84px; }
+body {
+  background: radial-gradient(1200px 600px at 75% -10%, rgba(77, 199, 250, 0.12), transparent 60%),
+              linear-gradient(180deg, var(--fx-bg-top), var(--fx-bg-bottom)) fixed;
+  color: var(--fx-text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", "Hiragino Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.text-secondary { color: var(--fx-muted) !important; }
+a { text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--fx-accent); outline-offset: 3px; border-radius: 6px; }
+.skip { position: absolute; left: 1rem; top: 1rem; z-index: 2000; background: #000; padding: .5rem 1rem; border-radius: .5rem; }
+
+.glass-nav { background: rgba(9, 14, 27, 0.72); backdrop-filter: saturate(160%) blur(16px); -webkit-backdrop-filter: saturate(160%) blur(16px); border-bottom: 1px solid var(--fx-stroke); }
+.navbar-brand { font-weight: 700; letter-spacing: .2px; color: var(--fx-text); }
+.brand-icon { border-radius: 22%; }
+.nav-link { color: var(--fx-muted); }
+.nav-link:hover, .nav-link:focus { color: var(--fx-text); }
+.dropdown-menu { background: #121827; border: 1px solid var(--fx-stroke); }
+
+.btn-accent { background: var(--fx-accent); color: #04121c; font-weight: 650; border: 0; }
+.btn-accent:hover, .btn-accent:focus { background: #7dd8ff; color: #04121c; }
+.btn-accent.disabled { background: rgba(77, 199, 250, 0.18); color: var(--fx-text); opacity: 1; cursor: default; }
+
+.ico { width: 1.25em; height: 1.25em; vertical-align: -0.2em; }
+.ico-sm { width: 1em; height: 1em; }
+.ico-lg { width: 1.6em; height: 1.6em; color: var(--fx-accent); }
+
+.hero { padding: 4.5rem 0 3rem; }
+.kicker { color: var(--fx-accent); text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; font-weight: 650; }
+.hero h1 { line-height: 1.12; }
+.lead { color: #d3dbe8; }
+
+.section { padding: 4rem 0; }
+.section-title { font-weight: 750; margin-bottom: .75rem; }
+.section-lead { color: var(--fx-muted); max-width: 46rem; margin-bottom: 2rem; }
+.narrow { max-width: 820px; }
+
+.glass-panel, .bento-card, .price-card, .faq-item {
+  background: var(--fx-card);
+  border: 1px solid var(--fx-stroke);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.glass-panel { padding: 1.75rem; }
+.honest { border-color: rgba(255, 191, 61, 0.35); }
+
+.bento { display: grid; gap: 1rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.bento-card { padding: 1.4rem; transition: transform .2s ease, border-color .2s ease; }
+.bento-card:hover { transform: translateY(-2px); border-color: rgba(77, 199, 250, 0.4); }
+.bento-card h3 { margin-top: .8rem; font-weight: 650; }
+.bento-card p { color: var(--fx-muted); margin-bottom: 0; }
+.bento-lg { grid-column: span 2; background: linear-gradient(160deg, rgba(77, 199, 250, 0.10), rgba(255, 255, 255, 0.04)); }
+@media (max-width: 991.98px) { .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 575.98px) { .bento { grid-template-columns: 1fr; } .bento-lg { grid-column: span 1; } .hero { padding-top: 2.5rem; } }
+
+.steps { list-style: none; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.step { background: var(--fx-card); border: 1px solid var(--fx-stroke); border-radius: 20px; padding: 1.4rem; }
+.step p { color: var(--fx-muted); margin: 0; }
+.step-num { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: rgba(77, 199, 250, .16); color: var(--fx-accent); font-weight: 700; margin-bottom: .6rem; }
+
+.checks { list-style: none; padding: 0; }
+.checks li { padding: .3rem 0; }
+.checks .ico { color: var(--fx-gain); }
+
+.phone-shot, .watch-shot { margin: 0; }
+.phone-shot img { width: min(100%, 300px); height: auto; border-radius: 36px; border: 1px solid var(--fx-stroke); box-shadow: 0 30px 80px rgba(0, 0, 0, .55), 0 0 0 8px rgba(255, 255, 255, .03); }
+.watch-shot img { width: min(100%, 210px); height: auto; border-radius: 44px; border: 10px solid #1b1f29; box-shadow: 0 24px 60px rgba(0, 0, 0, .55); }
+figcaption { color: var(--fx-muted); font-size: .8rem; margin-top: .9rem; }
+
+.price-card { padding: 1.8rem; }
+.price-card.featured { border-color: rgba(77, 199, 250, .55); box-shadow: 0 0 0 1px rgba(77, 199, 250, .25), 0 20px 60px rgba(77, 199, 250, .08); }
+.price { font-size: 2.4rem; font-weight: 800; margin: .3rem 0 .6rem; font-variant-numeric: tabular-nums; }
+
+.faq-item { margin-bottom: .75rem; padding: 0; }
+.faq-item summary { cursor: pointer; padding: 1.05rem 1.3rem; font-weight: 600; list-style: none; position: relative; padding-inline-end: 3rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; position: absolute; inset-inline-end: 1.3rem; color: var(--fx-accent); font-size: 1.3rem; line-height: 1; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p { padding: 0 1.3rem 1.1rem; color: var(--fx-muted); margin: 0; }
+
+.legal h2 { color: var(--fx-text); }
+.legal p { color: #cfd7e4; }
+
+.site-footer { border-top: 1px solid var(--fx-stroke); padding: 3rem 0 2.5rem; margin-top: 2rem; background: rgba(0, 0, 0, .18); }
+.site-footer a { color: var(--fx-muted); }
+.site-footer a:hover { color: var(--fx-text); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .bento-card:hover { transform: none; }
+}

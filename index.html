@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FXDesk — Offline Cross-Rate &amp; Triangle Calculator for Exchange Desks</title>
+<meta name="description" content="Bid/ask-aware triangular cross-rate calculator for currency exchange desks. Works offline with your own quotes. 3 free calculations, one-time lifetime unlock.">
+<link rel="canonical" href="https://github.tarikdavulcu.com/fxdesk/">
+<link rel="alternate" hreflang="en" href="https://github.tarikdavulcu.com/fxdesk/">
+<link rel="alternate" hreflang="de" href="https://github.tarikdavulcu.com/fxdesk/de/">
+<link rel="alternate" hreflang="fr" href="https://github.tarikdavulcu.com/fxdesk/fr/">
+<link rel="alternate" hreflang="ar" href="https://github.tarikdavulcu.com/fxdesk/ar/">
+<link rel="alternate" hreflang="es" href="https://github.tarikdavulcu.com/fxdesk/es/">
+<link rel="alternate" hreflang="ja" href="https://github.tarikdavulcu.com/fxdesk/ja/">
+<link rel="alternate" hreflang="tr" href="https://github.tarikdavulcu.com/fxdesk/tr/">
+<link rel="alternate" hreflang="x-default" href="https://github.tarikdavulcu.com/fxdesk/">
+<meta name="theme-color" content="#090e1b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FXDesk">
+<meta property="og:title" content="FXDesk — Offline Cross-Rate &amp; Triangle Calculator for Exchange Desks">
+<meta property="og:description" content="Bid/ask-aware triangular cross-rate calculator for currency exchange desks. Works offline with your own quotes. 3 free calculations, one-time lifetime unlock.">
+<meta property="og:url" content="https://github.tarikdavulcu.com/fxdesk/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.tarikdavulcu.com/fxdesk/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FXDesk app icon: a three-currency conversion cycle">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FXDesk — Offline Cross-Rate &amp; Triangle Calculator for Exchange Desks">
+<meta name="twitter:description" content="Bid/ask-aware triangular cross-rate calculator for currency exchange desks. Works offline with your own quotes. 3 free calculations, one-time lifetime unlock.">
+<meta name="twitter:image" content="https://github.tarikdavulcu.com/fxdesk/assets/img/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/site.css">
+<noscript><style>.navbar-collapse{display:block!important}</style></noscript>
+
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "FXDesk",
+ "applicationCategory": "FinanceApplication",
+ "operatingSystem": "iOS 26, watchOS 26",
+ "description": "Bid/ask-aware triangular cross-rate calculator for currency exchange desks. Works offline with your own quotes. 3 free calculations, one-time lifetime unlock.",
+ "inLanguage": "en",
+ "url": "https://github.tarikdavulcu.com/fxdesk/",
+ "image": "https://github.tarikdavulcu.com/fxdesk/assets/img/icon-512.png",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD",
+  "description": "Free download with 3 free calculations; optional one-time lifetime unlock (in-app purchase)."
+ }
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "en",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Does FXDesk work offline?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Quotes, profiles, history and all calculations are stored and run on your iPhone. Only the optional ECB reference-rate refresh and the App Store purchase need a connection."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it provide real-time exchange rates?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. FXDesk calculates with the quotes you enter. The optional ECB reference rates are published once per working day, are mid rates for information only and are never used in calculations."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is triangular arbitrage?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Converting A → B → C → A through three quotes. If the amount you end with is larger than the start amount after spreads, the cycle shows a theoretical difference."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does a calculated opportunity guarantee profit?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. A result is only as good as the quotes. Availability, banknote stock, limits, fees and timing at real desks can remove it. FXDesk labels results indicative or theoretical, never executable."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do bid and ask prices affect the result?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Selling a currency gives you the lower bid, buying costs the higher ask. Each leg pays the spread, so most cycles end slightly below the start amount."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many free calculations are included?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Three completed calculations. Errors and invalid input do not count."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is the lifetime purchase a subscription?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. It is a one-time, non-consumable in-app purchase that you can restore."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What can the watchOS companion show?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A read-only snapshot of the active desk: quotes and spreads, snapshot age, stale count and the last calculation."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does FXDesk execute transactions?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. It never places trades, exchanges money or connects to brokers or banks."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What data is stored locally?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Your desk profiles and quotes, calculation history and settings, plus the free-calculation counter. Nothing is uploaded; there is no account."
+   }
+  }
+ ]
+}</script>
+
+</head>
+<body>
+
+<a class="visually-hidden-focusable skip" href="#main">Skip to content</a>
+<header class="sticky-top">
+<nav class="navbar navbar-expand-lg glass-nav" aria-label="FXDesk">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="./"><img src="assets/img/icon-192.png" width="32" height="32" alt="" class="brand-icon">FXDesk</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="#features">Features</a></li><li class="nav-item"><a class="nav-link" href="#how">How it works</a></li><li class="nav-item"><a class="nav-link" href="#offline">Offline</a></li><li class="nav-item"><a class="nav-link" href="#watch">watchOS</a></li><li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li><li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> Language</a>
+<ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item active" href="./" hreflang="en" lang="en" aria-current="page">English</a></li><li><a class="dropdown-item" href="de/" hreflang="de" lang="de">Deutsch</a></li><li><a class="dropdown-item" href="fr/" hreflang="fr" lang="fr">Français</a></li><li><a class="dropdown-item" href="ar/" hreflang="ar" lang="ar">العربية</a></li><li><a class="dropdown-item" href="es/" hreflang="es" lang="es">Español</a></li><li><a class="dropdown-item" href="ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="dropdown-item" href="tr/" hreflang="tr" lang="tr">Türkçe</a></li></ul></li>
+</ul>
+<div class="ms-lg-3"><span class="btn btn-accent btn-sm disabled" aria-disabled="true">Coming soon to the App Store</span></div>
+</div></div></nav></header>
+
+<main id="main">
+<section class="hero"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-7">
+<p class="kicker">For cash desks, cashiers and currency traders</p>
+<h1 class="display-5 fw-bold">Cross rates and triangle paths, calculated from your own bid and ask quotes.</h1>
+<p class="lead">FXDesk turns the buy and sell prices on your board into a rate matrix, cross rates and ranked <bdi dir="ltr">A → B → C → A</bdi> conversion paths — with every spread, fee and timestamp visible.</p>
+<p class="text-secondary">It runs entirely on your iPhone, works without internet and never presents a theoretical result as a guaranteed profit.</p>
+<div class="d-flex flex-wrap gap-3 mt-4"><span class="btn btn-accent btn-lg disabled" aria-disabled="true">Coming soon to the App Store</span>
+<a class="btn btn-outline-light btn-lg" href="#features">Explore features</a></div>
+</div>
+<div class="col-lg-5 text-center"><figure class="phone-shot"><img src="assets/shots/en-triangle.jpg" width="560" height="1216" alt="Real FXDesk screen with the built-in example desk. Example values are illustrative, not market prices." loading="lazy" decoding="async"><figcaption>Real FXDesk screen with the built-in example desk. Example values are illustrative, not market prices.</figcaption></figure></div>
+</div></div></section>
+<section id="features" class="section"><div class="container">
+<h2 class="section-title">Built for the speed of a busy counter</h2><p class="section-lead">Every number shows where it came from, how old it is and which side of the quote was used.</p>
+<div class="bento"><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 8.8a15 15 0 0 1 4.2-2.6M9.5 5.2A15 15 0 0 1 22 8.8M5 12.5a10 10 0 0 1 3.4-2.2M12.9 10a10 10 0 0 1 6.1 2.5M8.5 16a5 5 0 0 1 7 0M12 20h.01M3 3l18 18"/></svg><h3 class="h5">Offline Resilience</h3><p>Rate tables, history and calculations live on the device. FXDesk opens and calculates in airplane mode.</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4 21 19H3Z"/><circle cx="12" cy="4" r="1.6"/><circle cx="3" cy="19" r="1.6"/><circle cx="21" cy="19" r="1.6"/></svg><h3 class="h5">Triangle Arbitrage Engine</h3><p>Evaluates every <bdi dir="ltr">A → B → C → A</bdi> cycle in your table, in both directions, and ranks them by estimated net result.</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6 9.5 2h5L15 6M9 18l.5 4h5l.5-4M12 9.5V12l1.5 1.5"/></svg><h3 class="h5">watchOS Spread View</h3><p>A read-only snapshot of your active desk, quote ages and your last result on Apple Watch.</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg><h3 class="h5">Cash Desk Speed</h3><p>Large-figure desk mode, monospaced digits and a search-first currency picker.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg><h3 class="h5">Local Rate Matrix</h3><p>Enter bid and ask per pair. The matrix shows what one unit converts to in every direction — and “—” where no quote exists.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4v16M7 4 3 8M7 4l4 4M17 20V4M17 20l-4-4M17 20l4-4"/></svg><h3 class="h5">Bid/Ask-Aware Calculations</h3><p>Selling a base currency uses the bid, buying it uses 1 ÷ ask. Inverse quotes swap sides correctly. Mid rates are never multiplied into a fake profit.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h14l-4-4M20 16H6l4 4"/></svg><h3 class="h5">Cross-Rate Spread Analysis</h3><p>Compare a direct quote with the synthetic cross through a third currency, including both spreads and crossed-market detection.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><h3 class="h5">Fee-Aware Results</h3><p>Add a commission per leg and a fixed fee. Gross and estimated net results are shown side by side, leg by leg.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="14" height="13" rx="2"/><path d="M7 4h12a2 2 0 0 1 2 2v11"/></svg><h3 class="h5">Saved Desk Profiles</h3><p>Separate rate tables per desk or branch. Duplicate, rename, export and import — quotes are never mixed between profiles.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg><h3 class="h5">Calculation History</h3><p>Every completed calculation is stored with the exact quotes, timestamps, rounding and fees it used.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg><h3 class="h5">Privacy by Design</h3><p>No account, no analytics, no tracking. Your quotes stay on your device unless you export them.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.2 8.5a5 5 0 1 1 0 7c-2.3-1.9-4.1-5.1-6.2-7a5 5 0 1 0 0 7c2.1-1.9 3.9-5.1 6.2-7Z"/></svg><h3 class="h5">One-Time Lifetime Unlock</h3><p>Three calculations free, then a single in-app purchase. No subscription.</p></article></div></div></section>
+<section id="how" class="section"><div class="container">
+<h2 class="section-title">How it works</h2><ol class="steps"><li class="step"><span class="step-num" aria-hidden="true">1</span><h3 class="h5">Enter quotes</h3><p>Type the buy (bid) and sell (ask) prices from your board, or start from the illustrative example desk.</p></li><li class="step"><span class="step-num" aria-hidden="true">2</span><h3 class="h5">Select currencies and amount</h3><p>Pick a start currency and amount, or a specific three-currency cycle.</p></li><li class="step"><span class="step-num" aria-hidden="true">3</span><h3 class="h5">Calculate valid paths</h3><p>FXDesk applies the correct quote side to every leg and ranks the cycles your table supports.</p></li><li class="step"><span class="step-num" aria-hidden="true">4</span><h3 class="h5">Review the evidence</h3><p>Check spreads, fees, cash rounding, quote freshness and the assumptions behind each result.</p></li></ol></div></section>
+<section id="transparency" class="section"><div class="container"><div class="glass-panel honest">
+<h2 class="section-title"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg> Financial transparency</h2><p>An indicative or reference rate is not an executable price. FXDesk calculates with the quotes you enter; it cannot know whether a desk will honour them, has the banknotes in stock or applies limits.</p><p>Spreads, commissions, rounding to banknotes and the time between legs usually remove small theoretical differences. That is why FXDesk shows gross and estimated net results separately and marks stale, mid-only or example data as theoretical.</p><p>FXDesk is a calculator. It does not execute trades or exchanges, does not give financial advice and does not guarantee any profit.</p></div></div></section>
+<section id="offline" class="section"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-7"><h2 class="section-title">Offline resilience</h2><p>All quotes, profiles, history and calculations are stored on the iPhone and work without a connection. Each quote keeps its observation time and source, and quotes older than your threshold are flagged — never silently treated as current.</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Manual quotes are the primary data source</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Stale-quote threshold you control</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Optional ECB reference rates — mid rates for comparison only, fetched only when you tap Refresh and never used in calculations</li></ul></div>
+<div class="col-lg-5 text-center"><figure class="phone-shot"><img src="assets/shots/en-rates.jpg" width="560" height="1216" alt="Illustrative example data" loading="lazy" decoding="async"><figcaption>Illustrative example data</figcaption></figure></div>
+</div></div></section>
+<section id="watch" class="section"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-4 text-center order-lg-2"><figure class="watch-shot"><img src="assets/shots/en-watch.jpg" width="300" height="357" alt="Apple Watch screen with illustrative example data." loading="lazy" decoding="async"><figcaption>Apple Watch screen with illustrative example data.</figcaption></figure></div>
+<div class="col-lg-8 order-lg-1"><h2 class="section-title">Apple Watch companion</h2><p>The watch app shows a read-only snapshot of the active desk: quotes with spreads, how old the snapshot is, how many quotes are stale and your last calculation. It keeps the last snapshot when the iPhone is out of reach.</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Snapshot, not live rates — the age is always visible</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Synced by iOS when the watch is reachable; delivery time is decided by the system</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Complications for snapshot age and stale count</li></ul></div>
+</div></div></section>
+<section id="pricing" class="section"><div class="container">
+<h2 class="section-title">Simple pricing</h2>
+<div class="row g-4">
+<div class="col-md-6"><div class="price-card h-100"><h3 class="h4">Run 3 Arbitrages Free</h3><p class="price">Free</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 3 completed triangle or cross-rate calculations</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Unlimited quote entry, rate matrix and history browsing</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> All features, nothing hidden</li></ul></div></div>
+<div class="col-md-6"><div class="price-card featured h-100"><h3 class="h4">Lifetime Unlock</h3><p class="price">$29.99</p><p class="small text-secondary">One-time in-app purchase (US price; local prices are set by the App Store).</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Unlimited calculations</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> No subscription, no account</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Restore on your devices with the same Apple Account</li></ul>
+<div class="mt-3"><span class="btn btn-accent disabled" aria-disabled="true">Coming soon to the App Store</span></div></div></div>
+</div>
+<div class="glass-panel mt-4"><h3 class="h5">What counts as a calculation?</h3><p class="mb-0">One successful triangle or cross-rate result. Invalid input, errors, browsing rates, editing quotes and reopening History never count, and repeating the identical calculation is not counted twice.</p></div>
+</div></section>
+<section id="faq" class="section"><div class="container narrow">
+<h2 class="section-title">Frequently asked questions</h2><details class="faq-item"><summary>Does FXDesk work offline?</summary><p>Yes. Quotes, profiles, history and all calculations are stored and run on your iPhone. Only the optional ECB reference-rate refresh and the App Store purchase need a connection.</p></details><details class="faq-item"><summary>Does it provide real-time exchange rates?</summary><p>No. FXDesk calculates with the quotes you enter. The optional ECB reference rates are published once per working day, are mid rates for information only and are never used in calculations.</p></details><details class="faq-item"><summary>What is triangular arbitrage?</summary><p>Converting <bdi dir="ltr">A → B → C → A</bdi> through three quotes. If the amount you end with is larger than the start amount after spreads, the cycle shows a theoretical difference.</p></details><details class="faq-item"><summary>Does a calculated opportunity guarantee profit?</summary><p>No. A result is only as good as the quotes. Availability, banknote stock, limits, fees and timing at real desks can remove it. FXDesk labels results indicative or theoretical, never executable.</p></details><details class="faq-item"><summary>How do bid and ask prices affect the result?</summary><p>Selling a currency gives you the lower bid, buying costs the higher ask. Each leg pays the spread, so most cycles end slightly below the start amount.</p></details><details class="faq-item"><summary>How many free calculations are included?</summary><p>Three completed calculations. Errors and invalid input do not count.</p></details><details class="faq-item"><summary>Is the lifetime purchase a subscription?</summary><p>No. It is a one-time, non-consumable in-app purchase that you can restore.</p></details><details class="faq-item"><summary>What can the watchOS companion show?</summary><p>A read-only snapshot of the active desk: quotes and spreads, snapshot age, stale count and the last calculation.</p></details><details class="faq-item"><summary>Does FXDesk execute transactions?</summary><p>No. It never places trades, exchanges money or connects to brokers or banks.</p></details><details class="faq-item"><summary>What data is stored locally?</summary><p>Your desk profiles and quotes, calculation history and settings, plus the free-calculation counter. Nothing is uploaded; there is no account.</p></details></div></section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-md-5"><p class="d-flex align-items-center gap-2 fw-semibold mb-2"><img src="assets/img/icon-192.png" width="28" height="28" alt="" class="brand-icon">FXDesk</p><p class="text-secondary small mb-0">Offline cross-rate and triangle calculator for currency desks.</p></div>
+<div class="col-md-3"><ul class="list-unstyled small mb-0">
+<li><a href="privacy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms of Use</a></li>
+<li><a href="support.html">Support</a></li>
+<li><a href="mailto:fxdesk@tarikdavulcu.com">Contact</a></li>
+</ul></div>
+<div class="col-md-4 small"><p class="mb-1"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> <a href="./" hreflang="en" lang="en">English</a> · <a href="de/" hreflang="de" lang="de">Deutsch</a> · <a href="fr/" hreflang="fr" lang="fr">Français</a> · <a href="ar/" hreflang="ar" lang="ar">العربية</a> · <a href="es/" hreflang="es" lang="es">Español</a> · <a href="ja/" hreflang="ja" lang="ja">日本語</a> · <a href="tr/" hreflang="tr" lang="tr">Türkçe</a></p></div>
+</div>
+<p class="small text-secondary mt-4 mb-0">© 2026 FXDesk. Not affiliated with any bank, exchange, central bank or Apple.</p>
+</div></footer>
+<script src="js/bootstrap.bundle.min.js" defer></script>
+</body></html>

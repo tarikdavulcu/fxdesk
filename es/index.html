@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es" dir="ltr" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FXDesk — Calculadora de tipos cruzados y arbitraje triangular sin conexión para casas de cambio</title>
+<meta name="description" content="Calculadora de tipos cruzados y ciclos triangulares que respeta compra y venta, para casas de cambio. Funciona sin conexión con tus cotizaciones. 3 cálculos gratis, pago único.">
+<link rel="canonical" href="https://github.tarikdavulcu.com/fxdesk/es/">
+<link rel="alternate" hreflang="en" href="https://github.tarikdavulcu.com/fxdesk/">
+<link rel="alternate" hreflang="de" href="https://github.tarikdavulcu.com/fxdesk/de/">
+<link rel="alternate" hreflang="fr" href="https://github.tarikdavulcu.com/fxdesk/fr/">
+<link rel="alternate" hreflang="ar" href="https://github.tarikdavulcu.com/fxdesk/ar/">
+<link rel="alternate" hreflang="es" href="https://github.tarikdavulcu.com/fxdesk/es/">
+<link rel="alternate" hreflang="ja" href="https://github.tarikdavulcu.com/fxdesk/ja/">
+<link rel="alternate" hreflang="tr" href="https://github.tarikdavulcu.com/fxdesk/tr/">
+<link rel="alternate" hreflang="x-default" href="https://github.tarikdavulcu.com/fxdesk/">
+<meta name="theme-color" content="#090e1b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FXDesk">
+<meta property="og:title" content="FXDesk — Calculadora de tipos cruzados y arbitraje triangular sin conexión para casas de cambio">
+<meta property="og:description" content="Calculadora de tipos cruzados y ciclos triangulares que respeta compra y venta, para casas de cambio. Funciona sin conexión con tus cotizaciones. 3 cálculos gratis, pago único.">
+<meta property="og:url" content="https://github.tarikdavulcu.com/fxdesk/es/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://github.tarikdavulcu.com/fxdesk/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FXDesk app icon: a three-currency conversion cycle">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FXDesk — Calculadora de tipos cruzados y arbitraje triangular sin conexión para casas de cambio">
+<meta name="twitter:description" content="Calculadora de tipos cruzados y ciclos triangulares que respeta compra y venta, para casas de cambio. Funciona sin conexión con tus cotizaciones. 3 cálculos gratis, pago único.">
+<meta name="twitter:image" content="https://github.tarikdavulcu.com/fxdesk/assets/img/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/site.css">
+<noscript><style>.navbar-collapse{display:block!important}</style></noscript>
+
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "FXDesk",
+ "applicationCategory": "FinanceApplication",
+ "operatingSystem": "iOS 26, watchOS 26",
+ "description": "Calculadora de tipos cruzados y ciclos triangulares que respeta compra y venta, para casas de cambio. Funciona sin conexión con tus cotizaciones. 3 cálculos gratis, pago único.",
+ "inLanguage": "es",
+ "url": "https://github.tarikdavulcu.com/fxdesk/es/",
+ "image": "https://github.tarikdavulcu.com/fxdesk/assets/img/icon-512.png",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD",
+  "description": "Free download with 3 free calculations; optional one-time lifetime unlock (in-app purchase)."
+ }
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "es",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "¿FXDesk funciona sin conexión?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí. Cotizaciones, perfiles, historial y cálculos están en tu iPhone. Solo los tipos de referencia opcionales del BCE y la compra en el App Store necesitan conexión."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Ofrece tipos de cambio en tiempo real?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. FXDesk calcula con tus cotizaciones. Los tipos opcionales del BCE se publican una vez por día hábil, son informativos y nunca se usan en cálculos."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué es el arbitraje triangular?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Convertir A → B → C → A a través de tres cotizaciones. Si el importe final supera el inicial tras los diferenciales, el ciclo muestra una diferencia teórica."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Una oportunidad calculada garantiza beneficio?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. El resultado depende de las cotizaciones. Disponibilidad, billetes, límites, comisiones y tiempos pueden anularlo. FXDesk marca los resultados como indicativos o teóricos, nunca ejecutables."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cómo influyen la compra y la venta?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Al vender recibes la compra, más baja; al comprar pagas la venta, más alta. Cada paso paga el diferencial, así que la mayoría de ciclos acaban algo por debajo del importe inicial."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cuántos cálculos gratuitos incluye?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tres cálculos completados. Los errores y entradas no válidas no cuentan."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿La compra de por vida es una suscripción?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Es una compra única no consumible que puedes restaurar."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué muestra la app de watchOS?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Una instantánea de solo lectura: cotizaciones y diferenciales, antigüedad, desactualizadas y el último cálculo."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿FXDesk ejecuta transacciones?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. No opera, no cambia dinero ni se conecta a bancos o brókeres."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué datos se guardan localmente?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tus perfiles y cotizaciones, el historial, los ajustes y el contador de cálculos gratuitos. No se sube nada; no hay cuenta."
+   }
+  }
+ ]
+}</script>
+
+</head>
+<body>
+
+<a class="visually-hidden-focusable skip" href="#main">Skip to content</a>
+<header class="sticky-top">
+<nav class="navbar navbar-expand-lg glass-nav" aria-label="FXDesk">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="../es/"><img src="../assets/img/icon-192.png" width="32" height="32" alt="" class="brand-icon">FXDesk</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="#features">Funciones</a></li><li class="nav-item"><a class="nav-link" href="#how">Cómo funciona</a></li><li class="nav-item"><a class="nav-link" href="#offline">Sin conexión</a></li><li class="nav-item"><a class="nav-link" href="#watch">watchOS</a></li><li class="nav-item"><a class="nav-link" href="#pricing">Precio</a></li><li class="nav-item"><a class="nav-link" href="#faq">Preguntas</a></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> Idioma</a>
+<ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="../" hreflang="en" lang="en">English</a></li><li><a class="dropdown-item" href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a class="dropdown-item" href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a class="dropdown-item" href="../ar/" hreflang="ar" lang="ar">العربية</a></li><li><a class="dropdown-item active" href="../es/" hreflang="es" lang="es" aria-current="page">Español</a></li><li><a class="dropdown-item" href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="dropdown-item" href="../tr/" hreflang="tr" lang="tr">Türkçe</a></li></ul></li>
+</ul>
+<div class="ms-lg-3"><span class="btn btn-accent btn-sm disabled" aria-disabled="true">Próximamente en el App Store</span></div>
+</div></div></nav></header>
+
+<main id="main">
+<section class="hero"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-7">
+<p class="kicker">Para casas de cambio, cajeros y operadores de divisas</p>
+<h1 class="display-5 fw-bold">Tipos cruzados y ciclos triangulares calculados con tus propias cotizaciones de compra y venta.</h1>
+<p class="lead">FXDesk convierte los precios de tu pizarra en una matriz de tipos, tipos cruzados y rutas <bdi dir="ltr">A → B → C → A</bdi> ordenadas, con cada diferencial, comisión y hora a la vista.</p>
+<p class="text-secondary">Funciona por completo en tu iPhone, sin internet, y nunca presenta un resultado teórico como un beneficio garantizado.</p>
+<div class="d-flex flex-wrap gap-3 mt-4"><span class="btn btn-accent btn-lg disabled" aria-disabled="true">Próximamente en el App Store</span>
+<a class="btn btn-outline-light btn-lg" href="#features">Ver funciones</a></div>
+</div>
+<div class="col-lg-5 text-center"><figure class="phone-shot"><img src="../assets/shots/es-triangle.jpg" width="560" height="1216" alt="Pantalla real de FXDesk con el mostrador de ejemplo incluido. Valores ilustrativos, no precios de mercado." loading="lazy" decoding="async"><figcaption>Pantalla real de FXDesk con el mostrador de ejemplo incluido. Valores ilustrativos, no precios de mercado.</figcaption></figure></div>
+</div></div></section>
+<section id="features" class="section"><div class="container">
+<h2 class="section-title">Hecho para el ritmo de un mostrador</h2><p class="section-lead">Cada cifra muestra de dónde viene, su antigüedad y qué lado de la cotización se usó.</p>
+<div class="bento"><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 8.8a15 15 0 0 1 4.2-2.6M9.5 5.2A15 15 0 0 1 22 8.8M5 12.5a10 10 0 0 1 3.4-2.2M12.9 10a10 10 0 0 1 6.1 2.5M8.5 16a5 5 0 0 1 7 0M12 20h.01M3 3l18 18"/></svg><h3 class="h5">Funciona sin conexión</h3><p>Tablas, historial y cálculos se guardan en el dispositivo. FXDesk abre y calcula en modo avión.</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4 21 19H3Z"/><circle cx="12" cy="4" r="1.6"/><circle cx="3" cy="19" r="1.6"/><circle cx="21" cy="19" r="1.6"/></svg><h3 class="h5">Motor de arbitraje triangular</h3><p>Evalúa cada ciclo <bdi dir="ltr">A → B → C → A</bdi> de tu tabla, en ambos sentidos, y los ordena por resultado neto estimado.</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6 9.5 2h5L15 6M9 18l.5 4h5l.5-4M12 9.5V12l1.5 1.5"/></svg><h3 class="h5">Diferenciales en watchOS</h3><p>Una instantánea de solo lectura de tu mostrador, la antigüedad de las cotizaciones y tu último resultado en el Apple Watch.</p></article><article class="bento-card bento-lg"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg><h3 class="h5">Velocidad de mostrador</h3><p>Modo de cifras grandes, dígitos monoespaciados y búsqueda de divisas.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg><h3 class="h5">Matriz local de tipos</h3><p>Introduce compra y venta por par. La matriz muestra cada sentido y «—» donde no hay cotización.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4v16M7 4 3 8M7 4l4 4M17 20V4M17 20l-4-4M17 20l4-4"/></svg><h3 class="h5">Compra/venta correctas</h3><p>Vender la divisa base usa la compra; comprarla, 1 ÷ venta. Las cotizaciones inversas intercambian lados correctamente. Nunca multiplica tipos medios para fingir beneficios.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h14l-4-4M20 16H6l4 4"/></svg><h3 class="h5">Análisis de diferencial cruzado</h3><p>Compara una cotización directa con el tipo cruzado sintético vía una tercera divisa, con ambos diferenciales y detección de mercado cruzado.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><h3 class="h5">Resultados con comisiones</h3><p>Añade comisión por paso y una tarifa fija. Bruto y neto estimado lado a lado, paso a paso.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="14" height="13" rx="2"/><path d="M7 4h12a2 2 0 0 1 2 2v11"/></svg><h3 class="h5">Perfiles de mostrador</h3><p>Una tabla por mostrador o sucursal. Duplica, renombra, exporta e importa; nunca se mezclan cotizaciones.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg><h3 class="h5">Historial de cálculos</h3><p>Cada cálculo se guarda con las cotizaciones exactas, horas, redondeo y comisiones utilizadas.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg><h3 class="h5">Privacidad desde el diseño</h3><p>Sin cuenta, sin analíticas, sin seguimiento. Tus cotizaciones se quedan en el dispositivo salvo que las exportes.</p></article><article class="bento-card bento-sm"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.2 8.5a5 5 0 1 1 0 7c-2.3-1.9-4.1-5.1-6.2-7a5 5 0 1 0 0 7c2.1-1.9 3.9-5.1 6.2-7Z"/></svg><h3 class="h5">Desbloqueo de por vida</h3><p>Tres cálculos gratis y luego una única compra dentro de la app. Sin suscripción.</p></article></div></div></section>
+<section id="how" class="section"><div class="container">
+<h2 class="section-title">Cómo funciona</h2><ol class="steps"><li class="step"><span class="step-num" aria-hidden="true">1</span><h3 class="h5">Introduce cotizaciones</h3><p>Escribe los precios de compra y venta de tu pizarra o empieza con el mostrador de ejemplo.</p></li><li class="step"><span class="step-num" aria-hidden="true">2</span><h3 class="h5">Elige divisas e importe</h3><p>Elige divisa inicial e importe, o un ciclo concreto de tres divisas.</p></li><li class="step"><span class="step-num" aria-hidden="true">3</span><h3 class="h5">Calcula las rutas válidas</h3><p>FXDesk aplica el lado correcto en cada paso y ordena los ciclos posibles.</p></li><li class="step"><span class="step-num" aria-hidden="true">4</span><h3 class="h5">Revisa los datos</h3><p>Comprueba diferenciales, comisiones, redondeo, antigüedad de las cotizaciones y supuestos.</p></li></ol></div></section>
+<section id="transparency" class="section"><div class="container"><div class="glass-panel honest">
+<h2 class="section-title"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg> Transparencia financiera</h2><p>Un tipo indicativo o de referencia no es un precio ejecutable. FXDesk calcula con las cotizaciones que introduces; no puede saber si un mostrador las respetará, si tiene los billetes o si aplica límites.</p><p>Diferenciales, comisiones, redondeo a billetes y el tiempo entre pasos suelen eliminar las pequeñas diferencias teóricas. Por eso FXDesk separa bruto y neto estimado y marca como teóricas las cotizaciones desactualizadas, solo medias o de ejemplo.</p><p>FXDesk es una calculadora. No ejecuta operaciones ni cambios, no ofrece asesoramiento financiero y no garantiza beneficios.</p></div></div></section>
+<section id="offline" class="section"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-7"><h2 class="section-title">Funciona sin conexión</h2><p>Cotizaciones, perfiles, historial y cálculos se guardan en el iPhone y funcionan sin conexión. Cada cotización conserva su hora y origen; las que superan tu umbral se marcan y nunca se tratan como actuales sin avisar.</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Las cotizaciones manuales son la fuente principal</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Umbral de antigüedad configurable</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Tipos de referencia del BCE opcionales: medios para comparar, descargados solo al pedirlo y nunca usados en cálculos</li></ul></div>
+<div class="col-lg-5 text-center"><figure class="phone-shot"><img src="../assets/shots/es-rates.jpg" width="560" height="1216" alt="Datos de ejemplo ilustrativos" loading="lazy" decoding="async"><figcaption>Datos de ejemplo ilustrativos</figcaption></figure></div>
+</div></div></section>
+<section id="watch" class="section"><div class="container"><div class="row align-items-center gx-3 gy-5 gx-lg-5">
+<div class="col-lg-4 text-center order-lg-2"><figure class="watch-shot"><img src="../assets/shots/es-watch.jpg" width="300" height="357" alt="Pantalla del Apple Watch con datos de ejemplo." loading="lazy" decoding="async"><figcaption>Pantalla del Apple Watch con datos de ejemplo.</figcaption></figure></div>
+<div class="col-lg-8 order-lg-1"><h2 class="section-title">Apple Watch</h2><p>La app del reloj muestra una instantánea de solo lectura del mostrador activo: cotizaciones y diferenciales, antigüedad, cotizaciones desactualizadas y el último cálculo. Conserva la última instantánea cuando el iPhone está lejos.</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Instantánea, no tipos en directo; la antigüedad siempre está visible</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> iOS la sincroniza cuando el reloj está disponible; el sistema decide cuándo</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Complicaciones para antigüedad y cotizaciones desactualizadas</li></ul></div>
+</div></div></section>
+<section id="pricing" class="section"><div class="container">
+<h2 class="section-title">Precio sencillo</h2>
+<div class="row g-4">
+<div class="col-md-6"><div class="price-card h-100"><h3 class="h4">3 arbitrajes gratis</h3><p class="price">Gratis</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> 3 cálculos triangulares o cruzados completados</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Cotizaciones, matriz e historial sin límite</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Todas las funciones, nada oculto</li></ul></div></div>
+<div class="col-md-6"><div class="price-card featured h-100"><h3 class="h4">Desbloqueo de por vida</h3><p class="price">$29.99</p><p class="small text-secondary">Compra única dentro de la app (precio en EE. UU.; el App Store fija los precios locales).</p><ul class="checks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Cálculos ilimitados</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Sin suscripción ni cuenta</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5 9-10"/></svg> Restaurable con la misma cuenta de Apple</li></ul>
+<div class="mt-3"><span class="btn btn-accent disabled" aria-disabled="true">Próximamente en el App Store</span></div></div></div>
+</div>
+<div class="glass-panel mt-4"><h3 class="h5">¿Qué cuenta como cálculo?</h3><p class="mb-0">Un resultado triangular o cruzado obtenido con éxito. Entradas no válidas, errores, consultar o editar cotizaciones y reabrir el historial nunca cuentan, y un cálculo idéntico no se cuenta dos veces.</p></div>
+</div></section>
+<section id="faq" class="section"><div class="container narrow">
+<h2 class="section-title">Preguntas frecuentes</h2><details class="faq-item"><summary>¿FXDesk funciona sin conexión?</summary><p>Sí. Cotizaciones, perfiles, historial y cálculos están en tu iPhone. Solo los tipos de referencia opcionales del BCE y la compra en el App Store necesitan conexión.</p></details><details class="faq-item"><summary>¿Ofrece tipos de cambio en tiempo real?</summary><p>No. FXDesk calcula con tus cotizaciones. Los tipos opcionales del BCE se publican una vez por día hábil, son informativos y nunca se usan en cálculos.</p></details><details class="faq-item"><summary>¿Qué es el arbitraje triangular?</summary><p>Convertir <bdi dir="ltr">A → B → C → A</bdi> a través de tres cotizaciones. Si el importe final supera el inicial tras los diferenciales, el ciclo muestra una diferencia teórica.</p></details><details class="faq-item"><summary>¿Una oportunidad calculada garantiza beneficio?</summary><p>No. El resultado depende de las cotizaciones. Disponibilidad, billetes, límites, comisiones y tiempos pueden anularlo. FXDesk marca los resultados como indicativos o teóricos, nunca ejecutables.</p></details><details class="faq-item"><summary>¿Cómo influyen la compra y la venta?</summary><p>Al vender recibes la compra, más baja; al comprar pagas la venta, más alta. Cada paso paga el diferencial, así que la mayoría de ciclos acaban algo por debajo del importe inicial.</p></details><details class="faq-item"><summary>¿Cuántos cálculos gratuitos incluye?</summary><p>Tres cálculos completados. Los errores y entradas no válidas no cuentan.</p></details><details class="faq-item"><summary>¿La compra de por vida es una suscripción?</summary><p>No. Es una compra única no consumible que puedes restaurar.</p></details><details class="faq-item"><summary>¿Qué muestra la app de watchOS?</summary><p>Una instantánea de solo lectura: cotizaciones y diferenciales, antigüedad, desactualizadas y el último cálculo.</p></details><details class="faq-item"><summary>¿FXDesk ejecuta transacciones?</summary><p>No. No opera, no cambia dinero ni se conecta a bancos o brókeres.</p></details><details class="faq-item"><summary>¿Qué datos se guardan localmente?</summary><p>Tus perfiles y cotizaciones, el historial, los ajustes y el contador de cálculos gratuitos. No se sube nada; no hay cuenta.</p></details></div></section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-md-5"><p class="d-flex align-items-center gap-2 fw-semibold mb-2"><img src="../assets/img/icon-192.png" width="28" height="28" alt="" class="brand-icon">FXDesk</p><p class="text-secondary small mb-0">Calculadora sin conexión de tipos cruzados y triangular para casas de cambio.</p></div>
+<div class="col-md-3"><ul class="list-unstyled small mb-0">
+<li><a href="../es/privacy.html">Privacidad</a></li>
+<li><a href="../es/terms.html">Condiciones de uso</a></li>
+<li><a href="../es/support.html">Soporte</a></li>
+<li><a href="mailto:fxdesk@tarikdavulcu.com">Contacto</a></li>
+</ul></div>
+<div class="col-md-4 small"><p class="mb-1"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> <a href="../" hreflang="en" lang="en">English</a> · <a href="../de/" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/" hreflang="fr" lang="fr">Français</a> · <a href="../ar/" hreflang="ar" lang="ar">العربية</a> · <a href="../es/" hreflang="es" lang="es">Español</a> · <a href="../ja/" hreflang="ja" lang="ja">日本語</a> · <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></p></div>
+</div>
+<p class="small text-secondary mt-4 mb-0">© 2026 FXDesk. Sin relación con bancos, bolsas, bancos centrales ni Apple.</p>
+</div></footer>
+<script src="../js/bootstrap.bundle.min.js" defer></script>
+</body></html>
